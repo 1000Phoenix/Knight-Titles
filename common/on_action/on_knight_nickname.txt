@@ -1,0 +1,164 @@
+﻿quarterly_playable_pulse  = 
+{
+	on_actions = {
+		on_angloknight_nickname
+		on_englishscotsknight_nickname
+		on_iberianknight_nickname
+		on_italianknight_nickname
+		on_frankishknight_nickname
+		on_germanknight_nickname
+		on_norseknight_nickname
+		on_westslavicknight_nickname
+	}
+}
+ 
+on_angloknight_nickname = 
+{
+	trigger = {
+		has_culture = culture:anglo_saxon
+	}
+	effect = {
+		every_knight = {
+			limit = {
+				is_landed = no 
+				has_culture = culture:anglo_saxon
+			}
+			give_nickname = nick_angloknight
+		}
+	}
+}
+ 
+on_englishscotsknight_nickname = 
+{
+	trigger = {
+	OR = {
+		has_culture = culture:english
+		has_culture = culture:scottish
+		}
+	}
+	effect = {
+		every_knight = {
+			limit = {
+				is_landed = no 
+				OR = { 
+				has_culture = culture:scottish
+				has_culture = culture:english
+				}
+			}
+			give_nickname = nick_englishscotsknight
+		}
+	}
+}
+ 
+on_iberianknight_nickname = 
+{
+	trigger = {
+		culture = { has_cultural_pillar = heritage_iberian }
+	}
+	effect = {
+		every_knight = {
+			limit = {
+				is_landed = no 
+				culture = { has_cultural_pillar = heritage_iberian }
+				}
+			give_nickname = nick_iberianknight
+		}
+	}
+}
+ 
+on_italianknight_nickname = 
+{
+	trigger = {
+		culture = { has_cultural_pillar = heritage_latin }
+	}
+	effect = {
+		every_knight = {
+			limit = {
+				is_landed = no 
+				culture = { has_cultural_pillar = heritage_latin }
+				}
+			give_nickname = nick_italianknight
+		}
+	}
+}
+ 
+on_frankishknight_nickname = 
+{
+	trigger = {
+		culture = { has_cultural_pillar = heritage_frankish }
+	}
+	effect = {
+		every_knight = {
+			limit = {
+				is_landed = no 
+				culture = { has_cultural_pillar = heritage_frankish }
+				}
+			give_nickname = nick_frankishknight
+		}
+	}
+}
+ 
+on_germanknight_nickname = 
+{
+	trigger = {
+        AND = {
+		culture = { has_cultural_pillar = heritage_central_germanic }
+		faith = { religion_tag = christianity_religion }
+		}
+	}
+	effect = {
+		every_knight = {
+			limit = {
+				is_landed = no 
+				AND = { 
+				culture = { has_cultural_pillar = heritage_central_germanic }
+				faith = { religion_tag = christianity_religion }
+				}
+			}	
+			give_nickname = nick_germanknight
+		}
+	}
+}
+ 
+on_norseknight_nickname = 
+{
+	trigger = {
+        AND = {	
+		culture = { has_cultural_pillar = heritage_north_germanic }
+		faith = { religion_tag = christianity_religion }
+		}
+	}
+	effect = {
+		every_knight = {
+			limit = {
+				is_landed = no 
+				AND = { 
+				culture = { has_cultural_pillar = heritage_north_germanic }
+				faith = { religion_tag = christianity_religion }
+				}
+			}	
+			give_nickname = nick_norseknight
+		}
+	}
+}
+ 
+on_westslavicknight_nickname = {
+	trigger = {
+		AND = {
+		culture = { has_cultural_pillar = heritage_west_slavic }
+		faith = { religion_tag = christianity_religion }
+		}
+	}
+	effect = {
+		every_knight = {
+			limit = {
+				is_landed = no 
+				AND = {
+				culture = { has_cultural_pillar = heritage_west_slavic }
+				faith = { religion_tag = christianity_religion }
+				}
+			}
+			give_nickname = nick_westslavicknight
+		}
+	}
+}

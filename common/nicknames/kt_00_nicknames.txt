@@ -1,0 +1,12 @@
+﻿#############################################
+# CHARACTER NICKNAMES
+#############################################
+ 
+nick_angloknight = { is_prefix = yes }
+nick_englishscotsknight = { is_prefix = yes }
+nick_italianknight = { is_prefix = yes }
+nick_iberianknight = { is_prefix = yes }
+nick_germanknight = { is_prefix = yes }
+nick_norseknight = { is_prefix = yes }
+nick_frankishknight = { is_prefix = yes }
+nick_westslavicknight = { is_prefix = yes }
